@@ -17,9 +17,9 @@ void main()
     TAT[0] = CT[0] - AT[0];
     WT[0] = TAT[0] - BT[0];
     for(int i=1; i<n; i++)
-    {                                                /*if the arrival time of the newly arrived process is less than the completion time of the previous process*/
+    {                                          /*if the arrival time of the newly arrived process is less than the completion time of the previous process*/
         if(CT[i-1]>AT[i])                     /*comparing the arrival time of the i th  process  with the completion time of previous , i-1 process*/
-            CT[i] = CT[i-1] + BT[i];       /*directly add burst time to the completion time of previous process*/
+            CT[i] = CT[i-1] + BT[i];         /*directly add burst time to the completion time of previous process*/
         else
             CT[i] = AT[i] + BT[i];          /*otherwise add  the  burst time of the process to its arrival time and update completion time*/
         TAT[i] = CT[i] - AT[i];
