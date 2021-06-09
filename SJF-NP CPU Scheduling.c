@@ -17,7 +17,7 @@ void main()
     int flag[n];
     for (int i = 0; i < n; i++)
     {
-        flag[i] = 0;                                               /*initializing all the values in the array, flag ,to 0 */
+        flag[i] = 0;                                         /*initializing all the values in the array, flag ,to 0 */
     }
 
     int current_time = AT[0], min, k;
@@ -27,7 +27,7 @@ void main()
         k = 0;
         for (int i = 0; i < n; i++)
         {
-            if (flag[i] == 0)                                    /* i.e. if the process is not completed*/
+            if (flag[i] == 0)                                /* i.e. if the process is not completed*/
             {
                 if (AT[i] <= current_time)
                 {
@@ -41,7 +41,7 @@ void main()
         }
         CT[k] = min + current_time;
         current_time = current_time + min;
-        flag[k] = 1;                                               /*update the value of flag array at k th index to 1 which shows that it is completed*/
+        flag[k] = 1;                                         /*update the value of flag array at k th index to 1 which shows that it is completed*/
         WT[k] = CT[k] - (BT[k] + AT[k]);
         TAT[k] = CT[k] - AT[k];
         AvgTAT += TAT[k];
