@@ -20,7 +20,7 @@ void main()
     }
     float avgWT = 0.0;
     float avgTAT = 0.0;
-    for(int i=0;i<n;i++)                                                /*Bubble Sort  to  sort the  inputs */
+    for(int i=0;i<n;i++)                                            /*Bubble Sort  to  sort the  inputs */
     {
         for(int j=0;j<n-1-i;j++)
         {
@@ -35,7 +35,7 @@ void main()
     int flag[n];
     for(int i=0;i<n;i++)
     {
-        flag[i]=0;                                                          /*flag array and initializing all the elements to 0 first*/
+        flag[i]=0;                                                   /*flag array and initializing all the elements to 0 first*/
     }
     int current_time=AT[0],min,k;
     for(int j=0;j<n;j++)
@@ -44,7 +44,7 @@ void main()
         k=0;
         for(int i=0;i<n;i++)
         {
-            if(flag[i]==0)                                                  /* if  flag value is 0  it means that the process is not completed*/
+            if(flag[i]==0)                                          /* if  flag value is 0  it means that the process is not completed*/
             {
                 if(AT[i]<=time)
                 {
