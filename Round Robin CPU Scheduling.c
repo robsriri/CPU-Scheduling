@@ -1,6 +1,6 @@
 #include <stdio.h>
 int test(int finish[], int n)                     /*Test function checks if any process remains to be processed  then it will return
-                                                         false,otherwise if all the processes have been completed , then will return true*/
+                                                  false,otherwise if all the processes have been completed , then will return true*/
 {
     for (int i = 0; i < n; i++)
     {
@@ -36,16 +36,16 @@ int main()
     scanf("%d", &time_quantum);
     printf("\n");
     i = 0;
-    while (test(finish, n) != 1)                                  /*till the test function does not give 1 i.e. till the time all the processes are not completed */
+    while (test(finish, n) != 1)                              /*till the test function does not give 1 i.e. till the time all the processes are not completed */
     {
         if (RBT[i] >= time_quantum)
         {
             curr_time = curr_time + time_quantum;
             RBT[i] = RBT[i] - time_quantum;                   /*updating the remaining burst time by subtracting time quantum*/
-            if (RBT[i] == 0)                                          /*i.e if the process is completed*/
+            if (RBT[i] == 0)                                  /*i.e if the process is completed*/
             {
                 CT[i] = curr_time;
-                finish[i] = 1;                                           /* Finish is an array which will stores 1 at index i for i  th  process. If the i th  process is completed  then 1 else 0*/
+                finish[i] = 1;                               /* Finish is an array which will stores 1 at index i for i  th  process. If the i th  process is completed  then 1 else 0*/
             }
         }
         else
@@ -57,7 +57,7 @@ int main()
                 finish[i] = 1;
             }
         }
-        i = (i + 1) % n;                                                  /*stay inside the range of the processes.*/
+        i = (i + 1) % n;                                      /*stay inside the range of the processes.*/
     }
 
     for (i = 0; i < n; i++)
